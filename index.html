@@ -12,6 +12,7 @@
       --text-secondary: #555;
       --bg: #FFFFFF;
       --border: #E5E5E5;
+      --panel: #FAFAFA;
     }
     * { box-sizing: border-box; }
     body {
@@ -23,25 +24,34 @@
       line-height: 1.7;
       -webkit-text-size-adjust: 100%;
     }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 24px 20px 64px; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 24px 20px 64px; }
     header { border-bottom: 3px solid var(--brand); padding-bottom: 16px; margin-bottom: 24px; }
     h1 { color: var(--brand); font-size: 1.5rem; margin: 0 0 4px; }
     .meta { color: var(--text-secondary); font-size: 0.85rem; }
     .intro { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 28px; }
     section { margin-bottom: 24px; }
     h2 { color: var(--brand); font-size: 1.05rem; margin: 0 0 6px; }
-    p { color: var(--text-secondary); margin: 0; font-size: 0.95rem; }
+    p { color: var(--text-secondary); margin: 0 0 8px; font-size: 0.95rem; }
+    ul { color: var(--text-secondary); margin: 0; padding-left: 1.2em; font-size: 0.95rem; }
+    li { margin-bottom: 4px; }
+    a { color: var(--brand); }
+    .contact {
+      padding: 12px 16px; border: 1px solid var(--border); border-radius: 8px;
+      background: var(--panel); color: var(--text-secondary); font-size: 0.95rem;
+    }
     .note {
       margin-top: 32px; padding: 14px 16px; border: 1px solid var(--border);
-      border-radius: 8px; color: var(--text-secondary); font-size: 0.85rem; background: #FAFAFA;
+      border-radius: 8px; color: var(--text-secondary); font-size: 0.85rem; background: var(--panel);
     }
     footer { margin-top: 40px; color: var(--text-secondary); font-size: 0.8rem; }
     @media (prefers-color-scheme: dark) {
-      :root { --text: #ECECEC; --text-secondary: #B5B5B5; --bg: #14131C; --border: #2E2C3B; }
-      .brand-accent { color: #B7B2D8; }
+      :root {
+        --text: #ECECEC; --text-secondary: #B5B5B5; --bg: #14131C;
+        --border: #2E2C3B; --panel: #1C1B26;
+      }
       h1, h2 { color: #B7B2D8; }
       header { border-bottom-color: #B7B2D8; }
-      .note { background: #1C1B26; }
+      a { color: #B7B2D8; }
     }
   </style>
 </head>
@@ -49,26 +59,39 @@
   <div class="wrap">
     <header>
       <h1>KGM PING 개인정보 처리방침</h1>
-      <div class="meta">KGM 오토매니저 정보 공유 앱 · 최종 개정일: 2026-07-22</div>
+      <div class="meta">KGM 오토매니저 정보 공유 앱 · 시행일: 2026-07-22</div>
     </header>
 
     <p class="intro">
-      본 방침은 KGM 오토매니저 정보 공유 앱(이하 &ldquo;앱&rdquo;)이 이용자의 개인정보를 어떻게
-      수집&middot;이용&middot;보관하는지 안내합니다. 파일럿 운영 기준의 초안이며, 세부 내용은 변경될 수
-      있습니다.
+      KG모빌리티(주) 영업기획팀(이하 &ldquo;운영자&rdquo;)은 KGM 오토매니저(AM) 정보 공유 앱
+      &ldquo;KGM PING&rdquo;(이하 &ldquo;앱&rdquo;)을 운영하며, 이용자의 개인정보를 중요하게 생각하고
+      「개인정보 보호법」 등 관련 법령을 준수합니다. 본 방침은 앱이 이용자의 개인정보를 어떻게
+      수집&middot;이용&middot;보관&middot;파기하는지 안내합니다. 본 방침은 파일럿 운영 기준의 초안이며, 세부
+      내용은 변경될 수 있습니다.
     </p>
 
     <section>
-      <h2>1. 수집하는 정보</h2>
+      <h2>1. 수집하는 개인정보 항목</h2>
+      <p>앱은 서비스 제공을 위해 다음 정보를 수집합니다.</p>
+      <ul>
+        <li>필수: 로그인용 사번, 이름, 소속(대리점/부서), 연락처(휴대전화번호), 기기 식별자, 푸시 알림 토큰</li>
+        <li>본사직원의 경우: 내선번호</li>
+        <li>서비스 이용 과정에서 자동 생성&middot;수집: 콘텐츠 열람(읽음) 기록, 접속 로그, 기기&middot;앱 버전 정보</li>
+      </ul>
+      <p>가입 시 본사 명단과의 대조를 위해 사번&middot;연락처가 사용됩니다.</p>
+    </section>
+
+    <section>
+      <h2>2. 개인정보의 처리 목적</h2>
       <p>
-        로그인용 사번, 이름, 소속(대리점/부서), 연락처, 기기 식별자, 푸시 알림 토큰, 그리고
-        본사직원의 경우 내선번호를 수집합니다. 가입 시 본사 명단과의 대조를 위해 사번&middot;연락처가
-        사용됩니다.
+        계정 인증 및 승인, 본사 정보(공지사항&middot;판매조건&middot;교육자료) 전달, 푸시 알림 발송,
+        콘텐츠 열람 현황 관리, 부정 이용 방지 및 문의 대응을 위해 개인정보를 처리합니다. 수집한
+        정보는 위 목적 외의 용도로 이용하지 않습니다.
       </p>
     </section>
 
     <section>
-      <h2>2. 열람(읽음) 기록 수집&middot;이용</h2>
+      <h2>3. 열람(읽음) 기록의 수집&middot;이용</h2>
       <p>
         공지사항&middot;판매조건&middot;교육자료를 열람하면, 누가 언제 해당 게시물을 읽었는지에 대한
         기록(읽음 로그)이 이용자 계정에 저장됩니다. 이 기록은 본사 정보 전달 여부 확인과 미열람
@@ -78,42 +101,105 @@
     </section>
 
     <section>
-      <h2>3. 이용 목적</h2>
+      <h2>4. 개인정보의 보유 및 이용 기간</h2>
       <p>
-        계정 인증&middot;승인, 본사 정보(공지&middot;판매조건&middot;교육) 전달, 푸시 알림 발송, 열람 현황 관리,
-        부정 이용 방지를 위해 이용합니다.
+        이용자의 개인정보는 원칙적으로 회원 자격 유지 기간 동안 보유하며, 회원 탈퇴&middot;자격 상실
+        또는 처리 목적 달성 시 지체 없이 파기합니다. 다만 관계 법령에 따라 보존할 필요가 있는 경우
+        해당 법령에서 정한 기간 동안 보관합니다. 열람 기록 등 운영 로그는 파일럿 운영 목적 달성 시
+        또는 수집일로부터 최대 1년 이내 파기합니다.
       </p>
     </section>
 
     <section>
-      <h2>4. 보관 및 파기</h2>
+      <h2>5. 개인정보 처리의 위탁 및 국외 이전</h2>
       <p>
-        수집한 정보는 이용 목적 달성 또는 이용자의 탈퇴&middot;자격 상실 시 관련 법령이 정한 기간 이후
-        지체 없이 파기합니다.
+        운영자는 안정적인 서비스 제공을 위해 아래와 같이 개인정보 처리를 국외 사업자에게 위탁하고
+        있으며, 이용자는 본 방침에 동의함으로써 국외 이전에 동의하게 됩니다.
+      </p>
+      <ul>
+        <li>Google LLC(미국): Firebase 인증&middot;데이터베이스&middot;저장소&middot;푸시(Cloud Messaging) — 계정 정보, 콘텐츠, 푸시 토큰, 열람 기록의 저장&middot;처리. 서비스 이용 기간 동안 보유.</li>
+        <li>Expo(미국): 푸시 알림 발송 중계 — 푸시 토큰. 발송 처리 시점에 이전.</li>
+        <li>Cloudflare, Inc.(미국 및 글로벌 엣지): 웹 푸시 릴레이 처리 — 푸시 발송 요청 데이터. 요청 처리 시점에 이전.</li>
+      </ul>
+      <p>
+        이전 방법은 서비스 이용 시 네트워크를 통한 전송이며, 위탁 계약 시 관련 법령에 따라
+        개인정보가 안전하게 관리되도록 규정합니다.
       </p>
     </section>
 
     <section>
-      <h2>5. 제3자 제공 및 처리 위탁</h2>
+      <h2>6. 개인정보의 제3자 제공</h2>
       <p>
-        앱은 서비스 제공을 위해 클라우드 인프라(파일 저장&middot;데이터베이스&middot;푸시 발송)를 이용하며,
-        이 범위를 넘어서는 제3자 제공은 하지 않습니다.
+        운영자는 이용자의 개인정보를 원칙적으로 외부에 제공하지 않습니다. 다만 법령에 특별한
+        규정이 있거나 수사기관이 법령에 정한 절차에 따라 요청하는 경우는 예외로 합니다. (제5항의
+        처리 위탁은 제3자 제공과 구분됩니다.)
       </p>
     </section>
 
     <section>
-      <h2>6. 이용자의 권리</h2>
+      <h2>7. 개인정보의 파기 절차 및 방법</h2>
       <p>
-        이용자는 본인 정보의 열람&middot;정정&middot;삭제&middot;처리정지를 요청할 수 있습니다. 문의는 소속 본사
-        담당자 또는 앱 관리자에게 하실 수 있습니다.
+        파기 사유가 발생한 개인정보는 지체 없이 파기합니다. 전자적 파일 형태의 정보는 복구&middot;재생할
+        수 없는 기술적 방법으로 삭제하며, 종이 문서는 분쇄 또는 소각합니다.
       </p>
     </section>
 
     <section>
-      <h2>7. 문의처</h2>
+      <h2>8. 정보주체의 권리&middot;의무 및 행사 방법</h2>
       <p>
-        개인정보 관련 문의: <a href="mailto:kgm.ob9@gmail.com" class="brand-accent">kgm.ob9@gmail.com</a>
-        (앱 관리자)
+        이용자는 언제든지 본인 개인정보의 열람&middot;정정&middot;삭제&middot;처리정지를 요청할 수 있습니다.
+        요청은 앱 내 문의 또는 아래 개인정보 보호책임자에게 하실 수 있으며, 운영자는 지체 없이
+        필요한 조치를 취합니다. 이용자는 소속 본사 담당자를 통해서도 문의할 수 있습니다.
+      </p>
+    </section>
+
+    <section>
+      <h2>9. 개인정보의 안전성 확보 조치</h2>
+      <p>운영자는 개인정보 보호를 위해 다음의 조치를 취합니다.</p>
+      <ul>
+        <li>서버 접근 권한의 최소화 및 역할 기반 접근 통제</li>
+        <li>전송 구간 암호화(HTTPS)</li>
+        <li>데이터베이스&middot;저장소 접근 규칙을 통한 미승인 계정 차단</li>
+        <li>관리자 기능의 권한 분리</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>10. 만 14세 미만 아동의 개인정보</h2>
+      <p>
+        앱은 만 14세 미만 아동의 개인정보를 수집하지 않습니다. 본 앱은 KGM 오토매니저 등 업무
+        관계자를 대상으로 합니다.
+      </p>
+    </section>
+
+    <section>
+      <h2>11. 개인정보 보호책임자 및 문의처</h2>
+      <div class="contact">
+        개인정보 보호책임자: 영업기획팀 전종윤 책임<br />
+        이메일: <a href="mailto:jongyoon.jeon@kg-mobility.com">jongyoon.jeon@kg-mobility.com</a>
+      </div>
+      <p style="margin-top:8px">
+        개인정보 처리에 관한 문의&middot;불만&middot;피해 구제는 위 연락처로 접수하실 수 있으며, 운영자는
+        신속하게 답변&middot;처리합니다.
+      </p>
+    </section>
+
+    <section>
+      <h2>12. 권익침해 구제 방법</h2>
+      <p>개인정보 침해로 인한 상담&middot;신고가 필요한 경우 아래 기관에 문의할 수 있습니다.</p>
+      <ul>
+        <li>개인정보분쟁조정위원회: (국번없이) 1833-6972 / <a href="https://www.kopico.go.kr">www.kopico.go.kr</a></li>
+        <li>개인정보침해 신고센터: (국번없이) 118 / <a href="https://privacy.kisa.or.kr">privacy.kisa.or.kr</a></li>
+        <li>대검찰청 사이버수사과: (국번없이) 1301</li>
+        <li>경찰청 사이버수사국: (국번없이) 182 / <a href="https://ecrm.police.go.kr">ecrm.police.go.kr</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>13. 개인정보 처리방침의 변경</h2>
+      <p>
+        본 방침은 관련 법령&middot;서비스 변경에 따라 개정될 수 있으며, 변경 시 앱 내 공지 또는 본
+        페이지를 통해 고지합니다. (공고일: 2026-07-22 / 시행일: 2026-07-22)
       </p>
     </section>
 
@@ -121,7 +207,7 @@
       ※ 본 방침은 파일럿용 초안입니다. 정식 운영 전 법률 검토를 거쳐 확정됩니다.
     </div>
 
-    <footer>© 2026 KGM PING</footer>
+    <footer>© 2026 KG Mobility · KGM PING</footer>
   </div>
 </body>
 </html>
